@@ -1,0 +1,91 @@
+.card-detail{
+    margin:15px;
+    width: 700px;
+    height: 300px;
+    border: solid 1px #ccc;
+    background: #0e4e5f;
+    color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover{
+        box-shadow: 0px 0px 10px #0e4e5f;
+        cursor: pointer;
+    }
+
+    .card-container-detail{
+        margin: 5px;
+        width: 660px;
+        height: 260px;
+        border: solid 1px #ccc;
+        background-color: #0a9aa0;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    .img-container-detail{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 400px;
+        height: 100%;
+
+        img{
+            width: 105%;
+            border-radius: 20px 0px 0px 20px;
+            object-fit: cover;
+        }
+
+    }
+    .card-body-detail{
+        width: 100%;
+        margin: 5px 0px 5px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        h1{
+            margin: 0px;
+            font-size: 50px;
+        }
+        p{
+            font-size: 30px;
+            margin: 0px 0px 0px 0px;
+        }
+    }
+}
+
+.card-status-detail{
+    display: flex;
+    align-items: center;
+
+
+}
+
+.On{
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: rgb(140, 255, 0);
+}
+.Off{
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: rgb(221, 37, 0);
+}
+.Unknown{
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: rgb(101, 101, 101);
+}
+
