@@ -25,7 +25,7 @@ const CardList = () => {
                 loading ? <p>Loading</p> :(
                     data.map((data) => {
                         return (
-                            <Card status = {data.status} id = {data.id} name= {data.name} species = {data.species} image = {data.image}/>
+                            <Card key={data.id} status = {data.status} id = {data.id} name= {data.name} species = {data.species} image = {data.image}/>
                         )
                     }
                 )

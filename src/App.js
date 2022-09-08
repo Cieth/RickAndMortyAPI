@@ -11,6 +11,7 @@ function App() {
       <div className="cards-wrapper">
         <CardList />
         <CardDetails />
+        
       </div>
     </div>
   );

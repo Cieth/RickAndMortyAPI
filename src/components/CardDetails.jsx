@@ -1,8 +1,22 @@
 import React from 'react'
+import axios from 'axios'
+import { useEffect,useState } from 'react'
+import { useParams } from 'react-router-dom'
 
+const CardDetails = () => {
 
-const CardDetails = ({ name, species, status, id, image , gender , type, origin}) => {
-  const {nameOrigin,urlOrigin} = origin
+    let {id} = useParams("1") 
+    const [data,setData] = useState([])
+    let { name, species, status, image , gender , type} = data
+    let API = `https://rickandmortyapi.com/api/character/${id}`
+    useEffect(() => {
+        axios.get(API)
+        .then(res => {
+            console.log(res.data)
+            setData(res.data)
+        })
+    },[API])
+
     return (
         <div className='card-detail' key={id}>
             <div className='card-container-detail'>
@@ -25,9 +39,6 @@ const CardDetails = ({ name, species, status, id, image , gender , type, origin}
                         {
                             type === "" ? <p>Type: No type</p> :<p>Type: {type}</p>
                         }
-                        <p>Location: {nameOrigin}</p>
-                        <p>Url: {urlOrigin}</p>
-
 
                     </div>
                     <p className="card-specie-detail" >Specie: {species}</p>
